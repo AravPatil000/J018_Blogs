@@ -1,5 +1,6 @@
 ---
-title: Quarto Template
+title: J018's Blog Website!
 ---
 
-Quarto template Text!
+You will find here blog entries done by the members of J018 - Arav Patil, Prajwal Patil & Abhinav Thakur. 
+To explore them, click on the blog icon on the top right corner.
