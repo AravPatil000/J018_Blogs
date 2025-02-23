@@ -40,4 +40,3 @@ Or, create a table:
 |-------|-----|
 | Alice | 20  |
 | Bob   | 21  |
-
