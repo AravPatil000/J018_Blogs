@@ -22,6 +22,15 @@ Let's see how to install dplyr in your system.
 
 ---
 
+# Practical Use
+After understanding all the important features of `dplyr`, it is time to appreciate the practical usage of it.
+It is used in many domains around the world. We will be exploring some of these domains and how it is implemented there.
+
+1. **Exploratory Data Analysis (EDA)**
+EDA is the process of understanding and summarizing datasets before applying further analysis.
+
+---
+
 # Conclusion
 dplyr is a fundamental package in R that enables fast and intuitive data manipulation. Its syntax-friendly interface and performance-optimized functions make it the go-to option for data analysts and researchers from diverse fields. Through the utilization of its primary functions—filter(), select(), mutate(), group_by(), summarise(), and arrange()—users can conveniently clean, convert, and examine big datasets with less effort.
 
