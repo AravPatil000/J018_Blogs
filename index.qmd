@@ -18,7 +18,19 @@ You will find here blog entries done by the members of J018 - Arav Patil, Prajwa
 To explore them, click on the blog icon on the top right corner.
 
 ## Installation Guide
-Let's see how to install dplyr in your system.
+
+Let's see how to install dplyr in your system!
+
+As `dplyr' is an `R` library, it is necessary to make sure that `R` is installed in the system, which can be done from [here](https://cran.r-project.org/bin/windows/base/).
+Follow all the necessary instructions and your are good to go!
+
+To verify the successfull installation, open your **Commond Prompt** and type `R --version`. If it shows the installed version, it means the installation was successful.
+
+- `dplyr` Installation
+
+After `R` is succes
+
+
 
 ---
 
@@ -48,7 +60,7 @@ In commerce, `dplyr` is crucial for sales analysis, customer segmentation, and p
 
 Management of city-wise populations, regional trends in data, and spatial statistics is made easy with `dplyr`. Summarizing big-scale location-based data helps urban planners and policymakers make well-informed decisions regarding infrastructure, transportation, and resource distribution, resulting in more effective city management.
 
-**All the above mentioned domains are discussed using examples which showcases `dplyr`'s usability in them. [Click here](https://aravpatil000.github.io/quarto-web/posts/J018_Exposition.html#business-analytics) to explore them.**
+**All the above mentioned domains are discussed using examples which showcases `dplyr`'s usability in them. [Click here](https://aravpatil000.github.io/quarto-web/posts/J018_Exposition.html) to explore them.**
 ---
 
 # Conclusion
@@ -67,3 +79,5 @@ Overall, dplyr improves efficiency, streamlines data handling, and makes working
 5. [Introduction to dplyr (RStudio Blog)](https://www.rstudio.com/resources/cheatsheets/) – Beginner-friendly guide.
 6. [DataCamp’s dplyr Course](https://www.datacamp.com/courses/dplyr-data-manipulation-in-r) – Interactive hands-on learning.
 ---
+
+The template for this website was taken from the [here](https://github.com/nipunbatra/quarto-template)
