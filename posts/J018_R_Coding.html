@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-8e00f2f28a1266a720913de837032221.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e3acdd9b67e85dd7c39f851874d9197e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7cfa380d139a4d61a924487b0af32b39.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -161,6 +161,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#advanced-dplyr-features" id="toc-advanced-dplyr-features" class="nav-link" data-scroll-target="#advanced-dplyr-features"><strong>Advanced dplyr Features</strong></a>
   <ul class="collapse">
   <li><a href="#group_by-with-summarize" id="toc-group_by-with-summarize" class="nav-link" data-scroll-target="#group_by-with-summarize"><strong>group_by() with summarize()</strong></a></li>
+  <li><a href="#joining-operations" id="toc-joining-operations" class="nav-link" data-scroll-target="#joining-operations"><strong>Joining Operations</strong></a></li>
+  <li><a href="#window-functions" id="toc-window-functions" class="nav-link" data-scroll-target="#window-functions"><strong>Window Functions</strong></a></li>
   <li><a href="#across-function" id="toc-across-function" class="nav-link" data-scroll-target="#across-function"><strong>across() Function</strong></a></li>
   <li><a href="#case_when-for-complex-conditions" id="toc-case_when-for-complex-conditions" class="nav-link" data-scroll-target="#case_when-for-complex-conditions"><strong>case_when() for Complex Conditions</strong></a></li>
   <li><a href="#handling-missing-values" id="toc-handling-missing-values" class="nav-link" data-scroll-target="#handling-missing-values"><strong>Handling Missing Values</strong></a></li>
@@ -5595,7 +5597,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-<p>###<strong>Joining Operations</strong></p>
+</section>
+<section id="joining-operations" class="level3">
+<h3 class="anchored" data-anchor-id="joining-operations"><strong>Joining Operations</strong></h3>
 <div id="cell-30" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample data frames</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">value =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>))</span>
@@ -5715,7 +5719,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 </div>
 </div>
-<p>###<strong>Window Functions</strong></p>
+</section>
+<section id="window-functions" class="level3">
+<h3 class="anchored" data-anchor-id="window-functions"><strong>Window Functions</strong></h3>
 <div id="cell-35" class="cell" data-outputid="95bf2766-84cb-4d33-9f3c-a939be37aea4" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rank cars by mpg within each cylinder group</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span></span>
