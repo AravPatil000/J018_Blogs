@@ -4,9 +4,14 @@ author: Arav Patil, Prajwal Patil & Abhinav Thakur
 badges: true
 categories:
 - Data Manipulation
-date: '2025-02-14'
+date: '2025-02-25'
 toc: true
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Sections"
 ---
-
+#Introduction
 You will find here blog entries done by the members of J018 - Arav Patil, Prajwal Patil & Abhinav Thakur. 
 To explore them, click on the blog icon on the top right corner.
