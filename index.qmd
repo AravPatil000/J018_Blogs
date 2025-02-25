@@ -24,3 +24,14 @@ dplyr is a fundamental package in R that enables fast and intuitive data manipul
 Overall, dplyr improves efficiency, streamlines data handling, and makes working with complex data easy. From academic research to industrial use and even personal endeavors, it is an invaluable asset for anyone working with structured data in R.
 
 ---
+
+# References & Further Readings
+
+-dplyr[Cheat Sheet (RStudio)](https://rstudio.github.io/cheatsheets/data-transformation.pdf) - Handy reference for quick lookups.
+-
+-
+-
+-
+-
+
+---
