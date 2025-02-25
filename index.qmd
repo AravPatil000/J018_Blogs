@@ -1,6 +1,6 @@
 ---
 title: Mastering Data Manipulation in R with dplyr
-author: Arav Patil, Prajwal Patil & Abhinav Thakur
+authors: Arav Patil, Prajwal Patil & Abhinav Thakur
 badges: true
 categories:
 - Data Manipulation, R
