@@ -42,6 +42,7 @@ In commerce, `dplyr` is crucial for sales analysis, customer segmentation, and p
 
 Management of city-wise populations, regional trends in data, and spatial statistics is made easy with `dplyr`. Summarizing big-scale location-based data helps urban planners and policymakers make well-informed decisions regarding infrastructure, transportation, and resource distribution, resulting in more effective city management.
 
+All the above mentioned domains are discussed using examples which showcases `dplyr`'s usability in them. [Click here](https://aravpatil000.github.io/quarto-web/posts/J018_Exposition.html#business-analytics) to explore them.
 ---
 
 # Conclusion
