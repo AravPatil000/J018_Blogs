@@ -27,11 +27,10 @@ Overall, dplyr improves efficiency, streamlines data handling, and makes working
 
 # References & Further Readings
 
-- dplyr[Cheat Sheet (RStudio)](https://rstudio.github.io/cheatsheets/data-transformation.pdf) - Handy reference for quick lookups.
--
--
--
--
--
-
+1. dplyr [Cheat Sheet (RStudio)](https://rstudio.github.io/cheatsheets/data-transformation.pdf) - Handy reference for quick lookups.
+2. Comprehensive [R Cheat Sheets](https://github.com/rstudio/cheatsheets) – Covers dplyr and related functions.
+3. dplyr [Official Documentation](https://dplyr.tidyverse.org/)
+4. [R for Data Science](https://r4ds.had.co.nz/) – Book by Hadley Wickham and Garrett Grolemund.
+5. [Introduction to dplyr (RStudio Blog)](https://www.rstudio.com/resources/cheatsheets/) – Beginner-friendly guide.
+6. [DataCamp’s dplyr Course](https://www.datacamp.com/courses/dplyr-data-manipulation-in-r) – Interactive hands-on learning.
 ---
