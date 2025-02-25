@@ -151,8 +151,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link active" data-scroll-target="#exploratory-data-analysis-eda"><strong>1) Exploratory Data Analysis (EDA)</strong></a></li>
-  <li><a href="#business-analytics" id="toc-business-analytics" class="nav-link" data-scroll-target="#business-analytics"><strong>2) Business Analytics</strong></a></li>
-  <li><a href="#geospatial-analysis" id="toc-geospatial-analysis" class="nav-link" data-scroll-target="#geospatial-analysis"><strong>4) Geospatial analysis</strong></a></li>
+  <li><a href="#healthcare-epidemiology-analysis" id="toc-healthcare-epidemiology-analysis" class="nav-link" data-scroll-target="#healthcare-epidemiology-analysis"><strong>2) Healthcare &amp; Epidemiology Analysis</strong></a></li>
+  <li><a href="#business-analytics" id="toc-business-analytics" class="nav-link" data-scroll-target="#business-analytics"><strong>3) Business &amp; Analytics</strong></a></li>
+  <li><a href="#geospatial-analysis" id="toc-geospatial-analysis" class="nav-link" data-scroll-target="#geospatial-analysis"><strong>4) Geospatial Analysis</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -611,8 +612,8 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 </section>
-<section id="business-analytics" class="level1">
-<h1><strong>2) Business Analytics</strong></h1>
+<section id="healthcare-epidemiology-analysis" class="level1">
+<h1><strong>2) Healthcare &amp; Epidemiology Analysis</strong></h1>
 <div id="0e9ec5ea-5569-4a11-88f8-4ab5f4ad25c3" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#As an example, we will do patient-data anlysis, consider a dataset 'hospital_data'.</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -879,24 +880,305 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 </section>
-<section id="geospatial-analysis" class="level1">
-<h1><strong>4) Geospatial analysis</strong></h1>
-<div id="2d06f93d-5fd2-44b9-abfc-12c2b1a32a7d" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#As an example, we will do air pollution anaylsis. For which, consider a dataset 'air_quality_data'</span></span>
+<section id="business-analytics" class="level1">
+<h1><strong>3) Business &amp; Analytics</strong></h1>
+<div id="86e8222c" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Consider a dataset 'sales_data', we can perform data analysis on it.</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">city =</span> <span class="fu">c</span>(<span class="st">"New York"</span>, <span class="st">"Los Angeles"</span>, <span class="st">"Chicago"</span>, <span class="st">"Houston"</span>, <span class="st">"Phoenix"</span>, </span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Philadelphia"</span>, <span class="st">"San Antonio"</span>, <span class="st">"San Diego"</span>, <span class="st">"Dallas"</span>, <span class="st">"San Jose"</span>),</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">state =</span> <span class="fu">c</span>(<span class="st">"NY"</span>, <span class="st">"CA"</span>, <span class="st">"IL"</span>, <span class="st">"TX"</span>, <span class="st">"AZ"</span>, <span class="st">"PA"</span>, <span class="st">"TX"</span>, <span class="st">"CA"</span>, <span class="st">"TX"</span>, <span class="st">"CA"</span>),</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">latitude =</span> <span class="fu">c</span>(<span class="fl">40.71</span>, <span class="fl">34.05</span>, <span class="fl">41.87</span>, <span class="fl">29.76</span>, <span class="fl">33.44</span>, <span class="fl">39.95</span>, <span class="fl">29.42</span>, <span class="fl">32.71</span>, <span class="fl">32.78</span>, <span class="fl">37.33</span>),</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">longitude =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">74.01</span>, <span class="sc">-</span><span class="fl">118.24</span>, <span class="sc">-</span><span class="fl">87.62</span>, <span class="sc">-</span><span class="fl">95.37</span>, <span class="sc">-</span><span class="fl">112.07</span>, <span class="sc">-</span><span class="fl">75.17</span>, <span class="sc">-</span><span class="fl">98.49</span>, <span class="sc">-</span><span class="fl">117.16</span>, <span class="sc">-</span><span class="fl">96.80</span>, <span class="sc">-</span><span class="fl">121.88</span>),</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">pm2_5 =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">25</span>, <span class="dv">18</span>, <span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">15</span>, <span class="dv">35</span>, <span class="dv">20</span>, <span class="dv">28</span>, <span class="dv">14</span>),  <span class="co"># Fine particulate matter</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">pm10 =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">55</span>, <span class="dv">45</span>, <span class="dv">35</span>, <span class="dv">65</span>, <span class="dv">38</span>, <span class="dv">52</span>, <span class="dv">33</span>),  <span class="co"># Larger particulate matter</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">aqi =</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">110</span>, <span class="dv">70</span>, <span class="dv">130</span>, <span class="dv">95</span>, <span class="dv">55</span>, <span class="dv">150</span>, <span class="dv">78</span>, <span class="dv">125</span>, <span class="dv">48</span>)  <span class="co"># Air Quality Index</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Viewing the first few rows of the dataset</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(air_quality_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>sales_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">date =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"2024-01-01"</span>, <span class="st">"2024-01-02"</span>, <span class="st">"2024-01-03"</span>, <span class="st">"2024-01-04"</span>, <span class="st">"2024-01-05"</span>, </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"2024-01-06"</span>, <span class="st">"2024-01-07"</span>, <span class="st">"2024-01-08"</span>, <span class="st">"2024-01-09"</span>, <span class="st">"2024-01-10"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"2024-01-11"</span>, <span class="st">"2024-01-12"</span>, <span class="st">"2024-01-13"</span>, <span class="st">"2024-01-14"</span>, <span class="st">"2024-01-15"</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"2024-01-16"</span>, <span class="st">"2024-01-17"</span>, <span class="st">"2024-01-18"</span>, <span class="st">"2024-01-19"</span>, <span class="st">"2024-01-20"</span>)),</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">product =</span> <span class="fu">c</span>(<span class="st">"Laptop"</span>, <span class="st">"Smartphone"</span>, <span class="st">"Tablet"</span>, <span class="st">"Smartwatch"</span>, <span class="st">"Headphones"</span>,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Laptop"</span>, <span class="st">"Smartphone"</span>, <span class="st">"Tablet"</span>, <span class="st">"Smartwatch"</span>, <span class="st">"Headphones"</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Laptop"</span>, <span class="st">"Smartphone"</span>, <span class="st">"Tablet"</span>, <span class="st">"Smartwatch"</span>, <span class="st">"Headphones"</span>,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Laptop"</span>, <span class="st">"Smartphone"</span>, <span class="st">"Tablet"</span>, <span class="st">"Smartwatch"</span>, <span class="st">"Headphones"</span>),</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">category =</span> <span class="fu">c</span>(<span class="st">"Electronics"</span>, <span class="st">"Electronics"</span>, <span class="st">"Electronics"</span>, <span class="st">"Wearables"</span>, <span class="st">"Accessories"</span>,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Electronics"</span>, <span class="st">"Electronics"</span>, <span class="st">"Electronics"</span>, <span class="st">"Wearables"</span>, <span class="st">"Accessories"</span>,</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Electronics"</span>, <span class="st">"Electronics"</span>, <span class="st">"Electronics"</span>, <span class="st">"Wearables"</span>, <span class="st">"Accessories"</span>,</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Electronics"</span>, <span class="st">"Electronics"</span>, <span class="st">"Electronics"</span>, <span class="st">"Wearables"</span>, <span class="st">"Accessories"</span>),</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">region =</span> <span class="fu">c</span>(<span class="st">"North"</span>, <span class="st">"South"</span>, <span class="st">"East"</span>, <span class="st">"West"</span>, <span class="st">"North"</span>,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>             <span class="st">"South"</span>, <span class="st">"East"</span>, <span class="st">"West"</span>, <span class="st">"North"</span>, <span class="st">"South"</span>,</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>             <span class="st">"East"</span>, <span class="st">"West"</span>, <span class="st">"North"</span>, <span class="st">"South"</span>, <span class="st">"East"</span>,</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>             <span class="st">"West"</span>, <span class="st">"North"</span>, <span class="st">"South"</span>, <span class="st">"East"</span>, <span class="st">"West"</span>),</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">sales =</span> <span class="fu">c</span>(<span class="dv">1500</span>, <span class="dv">2000</span>, <span class="dv">1200</span>, <span class="dv">800</span>, <span class="dv">500</span>,</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>            <span class="dv">1600</span>, <span class="dv">2100</span>, <span class="dv">1300</span>, <span class="dv">900</span>, <span class="dv">600</span>,</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>            <span class="dv">1700</span>, <span class="dv">2200</span>, <span class="dv">1400</span>, <span class="dv">1000</span>, <span class="dv">700</span>,</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>            <span class="dv">1800</span>, <span class="dv">2300</span>, <span class="dv">1500</span>, <span class="dv">1100</span>, <span class="dv">800</span>),</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">profit =</span> <span class="fu">c</span>(<span class="dv">300</span>, <span class="dv">400</span>, <span class="dv">250</span>, <span class="dv">100</span>, <span class="dv">80</span>,</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>             <span class="dv">320</span>, <span class="dv">420</span>, <span class="dv">260</span>, <span class="dv">120</span>, <span class="dv">90</span>,</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>             <span class="dv">350</span>, <span class="dv">450</span>, <span class="dv">270</span>, <span class="dv">130</span>, <span class="dv">100</span>,</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>             <span class="dv">380</span>, <span class="dv">470</span>, <span class="dv">280</span>, <span class="dv">140</span>, <span class="dv">120</span>)</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Prints the first few rows of the dataset.</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sales_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A data.frame: 6 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th" scope="col">date</th>
+<th data-quarto-table-cell-role="th" scope="col">product</th>
+<th data-quarto-table-cell-role="th" scope="col">category</th>
+<th data-quarto-table-cell-role="th" scope="col">region</th>
+<th data-quarto-table-cell-role="th" scope="col">sales</th>
+<th data-quarto-table-cell-role="th" scope="col">profit</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;date&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">1</td>
+<td>2024-01-01</td>
+<td>Laptop</td>
+<td>Electronics</td>
+<td>North</td>
+<td>1500</td>
+<td>300</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">2</td>
+<td>2024-01-02</td>
+<td>Smartphone</td>
+<td>Electronics</td>
+<td>South</td>
+<td>2000</td>
+<td>400</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">3</td>
+<td>2024-01-03</td>
+<td>Tablet</td>
+<td>Electronics</td>
+<td>East</td>
+<td>1200</td>
+<td>250</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">4</td>
+<td>2024-01-04</td>
+<td>Smartwatch</td>
+<td>Wearables</td>
+<td>West</td>
+<td>800</td>
+<td>100</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">5</td>
+<td>2024-01-05</td>
+<td>Headphones</td>
+<td>Accessories</td>
+<td>North</td>
+<td>500</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">6</td>
+<td>2024-01-06</td>
+<td>Laptop</td>
+<td>Electronics</td>
+<td>South</td>
+<td>1600</td>
+<td>320</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="85d07f1e" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 1: Best selling product.</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#This helps us identifying the profit area based on saleabiility.</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>sales_data <span class="sc">%&gt;%</span> </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(product) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_sales =</span> <span class="fu">sum</span>(sales)) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_sales)) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>) <span class="co">#Top 5 best-selling products.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 5 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">product</th>
+<th data-quarto-table-cell-role="th" scope="col">total_sales</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Smartphone</td>
+<td>8600</td>
+</tr>
+<tr class="even">
+<td>Laptop</td>
+<td>6600</td>
+</tr>
+<tr class="odd">
+<td>Tablet</td>
+<td>5400</td>
+</tr>
+<tr class="even">
+<td>Smartwatch</td>
+<td>3800</td>
+</tr>
+<tr class="odd">
+<td>Headphones</td>
+<td>2600</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="6bade11f" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 2: Monthly sales trend.</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Helps keeping track of the sales</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>sales_data <span class="sc">%&gt;%</span> </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">format</span>(<span class="fu">as.Date</span>(date), <span class="st">"%Y-%m"</span>)) <span class="sc">%&gt;%</span>  <span class="co"># Extract year-month</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_sales =</span> <span class="fu">sum</span>(sales)) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(month)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 1 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">month</th>
+<th data-quarto-table-cell-role="th" scope="col">total_sales</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2024-01</td>
+<td>27000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="b39df02c" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 3: Best performing regions</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Identifying the profitable regions for the expansion.</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>sales_data <span class="sc">%&gt;%</span> </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_sales =</span> <span class="fu">sum</span>(sales), <span class="at">total_profit =</span> <span class="fu">sum</span>(profit)) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_sales))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 4 × 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">region</th>
+<th data-quarto-table-cell-role="th" scope="col">total_sales</th>
+<th data-quarto-table-cell-role="th" scope="col">total_profit</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>West</td>
+<td>6900</td>
+<td>1310</td>
+</tr>
+<tr class="even">
+<td>East</td>
+<td>6800</td>
+<td>1260</td>
+</tr>
+<tr class="odd">
+<td>South</td>
+<td>6700</td>
+<td>1220</td>
+</tr>
+<tr class="even">
+<td>North</td>
+<td>6600</td>
+<td>1240</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="3a85240e" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 4: Category-wise sales breakdown</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Gives us an idea about which category sells the most.</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>sales_data <span class="sc">%&gt;%</span> </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(category) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total_sales =</span> <span class="fu">sum</span>(sales)) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_sales))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 3 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">category</th>
+<th data-quarto-table-cell-role="th" scope="col">total_sales</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Electronics</td>
+<td>20600</td>
+</tr>
+<tr class="even">
+<td>Wearables</td>
+<td>3800</td>
+</tr>
+<tr class="odd">
+<td>Accessories</td>
+<td>2600</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="geospatial-analysis" class="level1">
+<h1><strong>4) Geospatial Analysis</strong></h1>
+<div id="2d06f93d-5fd2-44b9-abfc-12c2b1a32a7d" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#As an example, we will do air pollution anaylsis. For which, consider a dataset 'air_quality_data'</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">city =</span> <span class="fu">c</span>(<span class="st">"New York"</span>, <span class="st">"Los Angeles"</span>, <span class="st">"Chicago"</span>, <span class="st">"Houston"</span>, <span class="st">"Phoenix"</span>, </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Philadelphia"</span>, <span class="st">"San Antonio"</span>, <span class="st">"San Diego"</span>, <span class="st">"Dallas"</span>, <span class="st">"San Jose"</span>),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">state =</span> <span class="fu">c</span>(<span class="st">"NY"</span>, <span class="st">"CA"</span>, <span class="st">"IL"</span>, <span class="st">"TX"</span>, <span class="st">"AZ"</span>, <span class="st">"PA"</span>, <span class="st">"TX"</span>, <span class="st">"CA"</span>, <span class="st">"TX"</span>, <span class="st">"CA"</span>),</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">latitude =</span> <span class="fu">c</span>(<span class="fl">40.71</span>, <span class="fl">34.05</span>, <span class="fl">41.87</span>, <span class="fl">29.76</span>, <span class="fl">33.44</span>, <span class="fl">39.95</span>, <span class="fl">29.42</span>, <span class="fl">32.71</span>, <span class="fl">32.78</span>, <span class="fl">37.33</span>),</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">longitude =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">74.01</span>, <span class="sc">-</span><span class="fl">118.24</span>, <span class="sc">-</span><span class="fl">87.62</span>, <span class="sc">-</span><span class="fl">95.37</span>, <span class="sc">-</span><span class="fl">112.07</span>, <span class="sc">-</span><span class="fl">75.17</span>, <span class="sc">-</span><span class="fl">98.49</span>, <span class="sc">-</span><span class="fl">117.16</span>, <span class="sc">-</span><span class="fl">96.80</span>, <span class="sc">-</span><span class="fl">121.88</span>),</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">pm2_5 =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">25</span>, <span class="dv">18</span>, <span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">15</span>, <span class="dv">35</span>, <span class="dv">20</span>, <span class="dv">28</span>, <span class="dv">14</span>),  <span class="co"># Fine particulate matter</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">pm10 =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">55</span>, <span class="dv">45</span>, <span class="dv">35</span>, <span class="dv">65</span>, <span class="dv">38</span>, <span class="dv">52</span>, <span class="dv">33</span>),  <span class="co"># Larger particulate matter</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">aqi =</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">110</span>, <span class="dv">70</span>, <span class="dv">130</span>, <span class="dv">95</span>, <span class="dv">55</span>, <span class="dv">150</span>, <span class="dv">78</span>, <span class="dv">125</span>, <span class="dv">48</span>)  <span class="co"># Air Quality Index</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Viewing the first few rows of the dataset</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(air_quality_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 6 × 7</caption>
@@ -988,18 +1270,18 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 <div id="e4687f38-f120-4c1d-a776-868d46d6a7b1" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 1: Average PM2.5 and PM10 levels by state, and cities with worst air quality.</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This helps in understanding air quality trends at the state level as well as </span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># identifying cities with worst air quality.</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_pm2_5 =</span> <span class="fu">mean</span>(pm2_5), <span class="at">avg_pm10 =</span> <span class="fu">mean</span>(pm10))</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(aqi)) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>) <span class="co">#Top 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 1: Average PM2.5 and PM10 levels by state, and cities with worst air quality.</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This helps in understanding air quality trends at the state level as well as </span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># identifying cities with worst air quality.</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_pm2_5 =</span> <span class="fu">mean</span>(pm2_5), <span class="at">avg_pm10 =</span> <span class="fu">mean</span>(pm10))</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(aqi)) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>) <span class="co">#Top 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A tibble: 6 × 3</caption>
@@ -1130,11 +1412,11 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 <div id="28b7688a-35b8-4bfe-af34-174a331f1509" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 2: Correlation between PM2.5 and AQI.</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This checks how strongly PM2.5 is related to overall air quality.</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">correlation =</span> <span class="fu">cor</span>(pm2_5, aqi))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 2: Correlation between PM2.5 and AQI.</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This checks how strongly PM2.5 is related to overall air quality.</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">correlation =</span> <span class="fu">cor</span>(pm2_5, aqi))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 1 × 1</caption>
@@ -1155,11 +1437,11 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 <div id="0f555edf-aeb1-4b26-8473-58b406b4964a" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 3: State-wise worst polluted city.</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(aqi <span class="sc">==</span> <span class="fu">max</span>(aqi))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 3: State-wise worst polluted city.</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(aqi <span class="sc">==</span> <span class="fu">max</span>(aqi))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A grouped_df: 6 × 7</caption>
@@ -1243,11 +1525,11 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 <div id="1eaae20e-2952-41d1-aa93-746ac56e52b8" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 4: Identifying cities with PM2.5 levels above the safe limit.</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This filters out cities where PM2.5 levels exceed 25 µg/m³, which is unhealthy.</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pm2_5 <span class="sc">&gt;</span> <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 4: Identifying cities with PM2.5 levels above the safe limit.</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This filters out cities where PM2.5 levels exceed 25 µg/m³, which is unhealthy.</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>air_quality_data <span class="sc">%&gt;%</span> </span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pm2_5 <span class="sc">&gt;</span> <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <caption>A data.frame: 3 × 7</caption>
