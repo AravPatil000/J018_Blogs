@@ -1,5 +1,11 @@
 ---
-title: J018's Blog Website!
+title: Mastering Data Manipulation in R with dplyr
+author: Arav Patil, Prajwal Patil & Abhinav Thakur
+badges: true
+categories:
+- Data Manipulation
+date: '2025-02-14'
+toc: true
 ---
 
 You will find here blog entries done by the members of J018 - Arav Patil, Prajwal Patil & Abhinav Thakur. 
