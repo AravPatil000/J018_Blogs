@@ -44,10 +44,8 @@ A message will appear after the successful installation.
 library(dplyr)
 ```
 Now, you are well-equiped with the library to perform **Data Analysis**.
-
-
-
-
+ 
+**Moreover, if you wish to use `R` in `Jupyter Notebook` like we have, you watch the [tutorial](https://www.youtube.com/watch?v=1sq-Pcq9W7c&t=207s) and configure your environment.**
 ---
 
 # Key features
