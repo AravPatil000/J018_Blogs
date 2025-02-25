@@ -25,13 +25,13 @@
     "href": "index.html",
     "title": "Mastering Data Manipulation in R with dplyr",
     "section": "",
-    "text": "You will find here blog entries done by the members of J018 - Arav Patil, Prajwal Patil & Abhinav Thakur. To explore them, click on the blog icon on the top right corner.\n\n\nLet’s see how to install dplyr in your system."
+    "text": "You will find here blog entries done by the members of J018 - Arav Patil, Prajwal Patil & Abhinav Thakur. To explore them, click on the blog icon on the top right corner.\n\n\nLet’s see how to install dplyr in your system!\nAs dplyr' is anRlibrary, it is necessary to make sure thatR` is installed in the system, which can be done from here. Follow all the necessary instructions and your are good to go!\nTo verify the successfull installation, open your Commond Prompt and type R --version. If it shows the installed version, it means the installation was successful.\n\ndplyr Installation\n\nAfter R is succes"
   },
   {
     "objectID": "index.html#installation-guide",
     "href": "index.html#installation-guide",
     "title": "Mastering Data Manipulation in R with dplyr",
     "section": "",
-    "text": "Let’s see how to install dplyr in your system."
+    "text": "Let’s see how to install dplyr in your system!\nAs dplyr' is anRlibrary, it is necessary to make sure thatR` is installed in the system, which can be done from here. Follow all the necessary instructions and your are good to go!\nTo verify the successfull installation, open your Commond Prompt and type R --version. If it shows the installed version, it means the installation was successful.\n\ndplyr Installation\n\nAfter R is succes"
   }
 ]
