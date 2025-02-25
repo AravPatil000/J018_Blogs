@@ -9,7 +9,7 @@
 <meta name="author" content="Arav Patil, Prajwal Patil &amp; Abhinav Thakur">
 <meta name="dcterms.date" content="2025-02-14">
 
-<title>Mastering Data Manipulation in R with dplyr – J018</title>
+<title>Exploring Use Cases – J018</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,15 +145,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link active" data-scroll-target="#exploratory-data-analysis-eda"><strong>1) Exploratory Data Analysis (EDA)</strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mastering Data Manipulation in R with dplyr</h1>
+<h1 class="title">Exploring Use Cases</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Data Manipulation</div>
   </div>
@@ -204,12 +210,8 @@ The following objects are masked from 'package:base':
 </code></pre>
 </div>
 </div>
-<p>USE CASES</p>
-<ol type="1">
-<li>Exploratory Data Analysis (EDA)</li>
-</ol>
-<p>EDA is the process of understanding and summarizing datasets before applying further analysis.</p>
-<p>Let’s take a look at this using an example.</p>
+<section id="exploratory-data-analysis-eda" class="level1">
+<h1><strong>1) Exploratory Data Analysis (EDA)</strong></h1>
 <div id="1c74e1ff-72de-481d-9eb4-5f70deba8364" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Consider we have a dataset 'customers_data', that we wish to analyze.</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -304,8 +306,8 @@ The following objects are masked from 'package:base':
 </table>
 </div>
 </div>
-<div id="8a1cfcac-932d-4827-b6a0-a4a934c1c581" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Function 1: Checking the data summary:</span></span>
+<div id="8a1cfcac-932d-4827-b6a0-a4a934c1c581" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 1: Checking the data summary:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(customers_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>  customer_id         age           gender             spending     
@@ -324,8 +326,8 @@ The following objects are masked from 'package:base':
                    </code></pre>
 </div>
 </div>
-<div id="4d567b74-b847-4ae2-b413-594c791bb59b" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Function 2: We can also find the missing values using 1 line of code!</span></span>
+<div id="4d567b74-b847-4ae2-b413-594c791bb59b" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 2: We can also find the missing values using 1 line of code!</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>customers_data <span class="sc">%&gt;%</span> <span class="fu">summarise_all</span>(<span class="sc">~</span><span class="fu">sum</span>(<span class="fu">is.na</span>(.)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -360,8 +362,8 @@ The following objects are masked from 'package:base':
 </div>
 </div>
 <p>It doesn’t have any missing values :)</p>
-<div id="b9b47567-fce3-43fc-95dc-7245ce77700c" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Function 3: We can also check the age distribution (any distri. for that matter)</span></span>
+<div id="b9b47567-fce3-43fc-95dc-7245ce77700c" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 3: We can also check the age distribution (any distri. for that matter)</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>customers_data <span class="sc">%&gt;%</span> </span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(age) <span class="sc">%&gt;%</span> </span>
@@ -465,8 +467,8 @@ The following objects are masked from 'package:base':
 </table>
 </div>
 </div>
-<div id="1daac9f1-7f96-41dd-9d14-6d61980025b4" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Function 4: Let's say we wish to analyze spendings by gender and find the top spending customers.</span></span>
+<div id="1daac9f1-7f96-41dd-9d14-6d61980025b4" class="cell" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Analysis 4: Let's say we wish to analyze spendings by gender and find the top spending customers.</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>customers_data <span class="sc">%&gt;%</span> </span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span> </span>
@@ -606,6 +608,7 @@ The following objects are masked from 'package:base':
 </table>
 </div>
 </div>
+<p><strong><code>dplyr</code> makes data exploration easier through rapid summarizing, filtering, and visualization preparation. It aids in the detection of missing values, outliers, and distribution trends, enabling analysts to clean and preprocess data in an efficient manner prior to additional analysis.</strong></p>
 <ol start="2" type="1">
 <li><p>Business Analytics</p>
 <p>Business analytics helps companies make data-driven decisions by analyzing revenue, sales trends, and profits.</p></li>
@@ -1581,6 +1584,7 @@ The following objects are masked from 'package:base':
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
