@@ -27,7 +27,7 @@ Overall, dplyr improves efficiency, streamlines data handling, and makes working
 
 # References & Further Readings
 
--dplyr[Cheat Sheet (RStudio)](https://rstudio.github.io/cheatsheets/data-transformation.pdf) - Handy reference for quick lookups.
+- dplyr[Cheat Sheet (RStudio)](https://rstudio.github.io/cheatsheets/data-transformation.pdf) - Handy reference for quick lookups.
 -
 -
 -
