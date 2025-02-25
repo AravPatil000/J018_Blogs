@@ -19,7 +19,7 @@ To explore them, click on the blog icon on the top right corner.
 
 ## Installation Guide
 
-Let's see how to install dplyr in your system!
+Let's see how to install dplyr in your Windows system!
 
 As `dplyr' is an `R` library, it is necessary to make sure that `R` is installed in the system, which can be done from [here](https://cran.r-project.org/bin/windows/base/).
 Follow all the necessary instructions and your are good to go!
@@ -28,7 +28,11 @@ To verify the successfull installation, open your **Commond Prompt** and type `R
 
 - `dplyr` Installation
 
-After `R` is succes
+After `R` is successfully installed, follow the given steps to sucessfully install `dplyr` library in your system.
+
+1. Open your **Command Prompt** or **Powershell** and open the `R` prompt by typing `R`
+![Image 1](images/r--version.png)
+
 
 
 
