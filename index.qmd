@@ -35,7 +35,15 @@ After `R` is successfully installed, follow the given steps to sucessfully insta
 ```r
 install.packages("dplyr")
 ```
+2. After that, the installation prompt would appear. Choose the appropriate server and click **OK**.
+![Image 2](images/dplyr-prompt.png)
+A message will appear after the successful installation.
 
+3. Now, the library is ready to load and use. To load it, type:
+```r
+library(dplyr)
+```
+Now, you are well-equiped with the library to perform **Data Analysis**.
 
 
 
