@@ -35,7 +35,7 @@ After `R` is successfully installed, follow the given steps to sucessfully insta
 install.packages("dplyr")
 ```
 2. After that, the installation prompt would appear. Choose the appropriate server and click **OK**.
-![Image 2](images/dplyr-prompt.png)
+![Image 2](images/dplyr-install.png)
 
 A message will appear after the successful installation.
 
@@ -45,7 +45,7 @@ library(dplyr)
 ```
 Now, you are well-equiped with the library to perform **Data Analysis**.
  
-**Moreover, if you wish to use `R` in `Jupyter Notebook` like we have, you watch the [tutorial](https://www.youtube.com/watch?v=1sq-Pcq9W7c&t=207s) and configure your environment.**
+**Moreover, if you wish to use `R` in `Jupyter Notebook` like we have, you can watch the [tutorial](https://www.youtube.com/watch?v=1sq-Pcq9W7c&t=207s) and configure your environment.**
 ---
 
 # Key features
