@@ -52,7 +52,7 @@ Now, you are well-equiped with the library to perform **Data Analysis**.
 
 # Key features
 
-All the important key features, ranging from very **basic** to **Advance** are discussed [here](https://aravpatil000.github.io/quarto-web/posts/J018_R_Coding.html).
+All the important key features, ranging from very **basic** to **Advance** are discussed [here](https://aravpatil000.github.io/J018_Blogs/posts/Key_Features.html).
 
 ---
 
@@ -76,13 +76,13 @@ In commerce, `dplyr` is crucial for sales analysis, customer segmentation, and p
 
 Management of city-wise populations, regional trends in data, and spatial statistics is made easy with `dplyr`. Summarizing big-scale location-based data helps urban planners and policymakers make well-informed decisions regarding infrastructure, transportation, and resource distribution, resulting in more effective city management.
 
-**All the above mentioned domains are discussed using examples which showcases `dplyr`'s usability in them. [Click here](https://aravpatil000.github.io/quarto-web/posts/J018_Exposition.html) to explore them.**
+**All the above mentioned domains are discussed using examples which showcases `dplyr`'s usability in them. [Click here](https://aravpatil000.github.io/J018_Blogs/posts/Use_Cases.html) to explore them.**
 ---
 
 # Conclusion
 dplyr is a fundamental package in R that enables fast and intuitive data manipulation. Its syntax-friendly interface and performance-optimized functions make it the go-to option for data analysts and researchers from diverse fields. Through the utilization of its primary functions — `filter()`, `select()`, `mutate()`, `group_by()`, `summarise()`, and `arrange()` — users can conveniently clean, convert, and examine big datasets with less effort.
 
-Overall, dplyr improves efficiency, streamlines data handling, and makes working with complex data easy. From academic research to industrial use and even personal endeavors, it is an invaluable asset for anyone working with structured data in R.
+Overall, `dplyr` improves efficiency, streamlines data handling, and makes working with complex data easy. From academic research to industrial use and even personal endeavors, it is an invaluable asset for anyone working with structured data in R.
 
 ---
 
